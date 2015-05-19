@@ -256,15 +256,30 @@ afterEvaluate { project ->
 task uploadToNexus(type: Upload, dependsOn: build) {
     configuration = configurations.archives
     repositories.mavenDeployer {
-        // Ensure gradle works without properties defined
+        /**
+         * Note: to upload the archive the developer must specify the username and password in their gradle
+         * properties file:
+         *    ~/.gradle/gradle.properties
+         *       mavenUser=admin
+         *       mavenPassword=myAdminPassword
+         *
+         * Alternative: it is possible to pass in a property to the build like the following.
+         *
+         *    ./gradle uploadArchives -PsonatypeUsername=MysticalDeployer -PsonatypePassword=password1
+         *
+         *    authentication(userName: project.hasProperty("sonatypeUsername") ?
+         *              project.sonatypeUsername : null, password: project.hasProperty("sonatypePassword") ?
+         *              project.sonatypePassword : null)
+         *
+         */
         ext.mavenUser = project.hasProperty('mavenUser') ? project.getProperty('mavenUser') : 'unspecified'
         ext.mavenPassword = project.hasProperty('mavenPassword') ? project.getProperty('mavenPassword') : 'unspecified'
 
         repository(url: "http://nexus-ordnancesurvey.rhcloud.com/nexus/content/repositories/releases") {
-            authentication(userName: "circleci", password: "circlebuild")
+            authentication(userName: mavenUser, password: mavenPassword)
         }
         snapshotRepository(url: "http://nexus-ordnancesurvey.rhcloud.com/nexus/content/repositories/snapshots") {
-            authentication(userName: "circleci", password: "circlebuild")
+            authentication(userName: mavenUser, password: mavenPassword)
         }
 
         pom.project {
