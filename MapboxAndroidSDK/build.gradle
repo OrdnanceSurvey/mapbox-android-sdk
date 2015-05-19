@@ -3,7 +3,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.2.2'
+        classpath 'com.android.tools.build:gradle:1.2.3'
         classpath 'com.jakewharton.sdkmanager:gradle-plugin:0.10.1'
     }
 }
@@ -285,6 +285,7 @@ task uploadToNexus(type: Upload, dependsOn: build) {
         pom.project {
             name 'Mapbox Android raster SDK'
             packaging 'aar'
+            artifactId 'mapbox-android-sdk'
             description 'OS Fork of Mapbox Android raster SDK'
             delegate.url 'https://github.com/OrdnanceSurvey/mapbox-android-sdk'
 
