@@ -41,7 +41,6 @@ public class MainActivity extends ActionBarActivity {
         testFragmentNames.add(getString(R.string.markersTestMap));
         testFragmentNames.add(getString(R.string.itemizedOverlayTestMap));
         testFragmentNames.add(getString(R.string.localGeoJSONTestMap));
-        testFragmentNames.add(getString(R.string.localOSMTestMap));
         testFragmentNames.add(getString(R.string.diskCacheDisabledTestMap));
         testFragmentNames.add(getString(R.string.offlineCacheTestMap));
         testFragmentNames.add(getString(R.string.programmaticTestMap));
@@ -142,42 +141,39 @@ public class MainActivity extends ActionBarActivity {
                 fragment = new LocalGeoJSONTestFragment();
                 break;
             case 5:
-                fragment = new LocalOSMTestFragment();
-                break;
-            case 6:
                 fragment = new DiskCacheDisabledTestFragment();
                 break;
-            case 7:
+            case 6:
                 fragment = new OfflineCacheTestFragment();
                 break;
-            case 8:
+            case 7:
                 fragment = new ProgrammaticTestFragment();
                 break;
-            case 9:
+            case 8:
                 fragment = new WebSourceTileTestFragment();
                 break;
-            case 10:
+            case 9:
                 fragment = new LocateMeTestFragment();
                 break;
-            case 11:
+            case 10:
                 fragment = new PathTestFragment();
                 break;
-            case 12:
+            case 11:
                 fragment = new BingTileTestFragment();
                 break;
-            case 13:
+            case 12:
                 fragment = new SaveMapOfflineTestFragment();
                 break;
-            case 14:
+            case 13:
                 fragment = new TapForUTFGridTestFragment();
                 break;
-            case 15:
+            case 14:
                 fragment = new CustomMarkerTestFragment();
                 break;
-            case 16:
+            case 15:
                 fragment = new RotatedMapTestFragment();
                 break;
-            case 17:
+            case 16:
                 fragment = new ClusteredMarkersTestFragment();
                 break;
             default:
