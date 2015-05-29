@@ -18,8 +18,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 	private DrawerLayout          mDrawerLayout;
 	private ActionBarDrawerToggle mDrawerToggle;
 	private NavigationView        mNavigationView;
-	private Menu                  testFragmentNames;
-	private int selectedFragmentIndex = 0;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -34,14 +32,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 		mNavigationView.setNavigationItemSelectedListener(this);
 
 		// Set the adapter for the list view
-		testFragmentNames = mNavigationView.getMenu();
+		Menu testFragmentNames = mNavigationView.getMenu();
+
 		int i = 0;
 		testFragmentNames.add(Menu.NONE, i++, Menu.NONE, getString(R.string.mainTestMap));
 		testFragmentNames.add(Menu.NONE, i++, Menu.NONE, getString(R.string.alternateTestMap));
 		testFragmentNames.add(Menu.NONE, i++, Menu.NONE, getString(R.string.markersTestMap));
 		testFragmentNames.add(Menu.NONE, i++, Menu.NONE, getString(R.string.itemizedOverlayTestMap));
 		testFragmentNames.add(Menu.NONE, i++, Menu.NONE, getString(R.string.localGeoJSONTestMap));
-		testFragmentNames.add(Menu.NONE, i++, Menu.NONE, getString(R.string.localOSMTestMap));
 		testFragmentNames.add(Menu.NONE, i++, Menu.NONE, getString(R.string.diskCacheDisabledTestMap));
 		testFragmentNames.add(Menu.NONE, i++, Menu.NONE, getString(R.string.offlineCacheTestMap));
 		testFragmentNames.add(Menu.NONE, i++, Menu.NONE, getString(R.string.programmaticTestMap));
@@ -54,9 +52,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 		testFragmentNames.add(Menu.NONE, i++, Menu.NONE, getString(R.string.customMarkerTestMap));
 		testFragmentNames.add(Menu.NONE, i++, Menu.NONE, getString(R.string.rotatedMapTestMap));
 		testFragmentNames.add(Menu.NONE, i++, Menu.NONE, getString(R.string.clusteredMarkersTestMap));
-		testFragmentNames.add(Menu.NONE, i++, Menu.NONE, getString(R.string.mbTilesTestMap));
-        testFragmentNames.add(Menu.NONE, i, Menu.NONE, getString(R.string.draggableMarkersTestMap));
-
 
 		// Set the drawer toggle as the DrawerListener
 		final Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -92,7 +87,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 		final MenuItem menuItem = mNavigationView.getMenu().findItem(position);
 		setTitle(menuItem.getTitle());
 
-		selectedFragmentIndex = position;
 		// Create a new fragment and specify the planet to show based on position
 		Fragment fragment;
 
@@ -113,50 +107,41 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 				fragment = new LocalGeoJSONTestFragment();
 				break;
 			case 5:
-				fragment = new LocalOSMTestFragment();
-				break;
-			case 6:
 				fragment = new DiskCacheDisabledTestFragment();
 				break;
-			case 7:
+			case 6:
 				fragment = new OfflineCacheTestFragment();
 				break;
-			case 8:
+			case 7:
 				fragment = new ProgrammaticTestFragment();
 				break;
-			case 9:
+			case 8:
 				fragment = new WebSourceTileTestFragment();
 				break;
-			case 10:
+			case 9:
 				fragment = new LocateMeTestFragment();
 				break;
-			case 11:
+			case 10:
 				fragment = new PathTestFragment();
 				break;
-			case 12:
+			case 11:
 				fragment = new BingTileTestFragment();
 				break;
-			case 13:
+			case 12:
 				fragment = new SaveMapOfflineTestFragment();
 				break;
-			case 14:
+			case 13:
 				fragment = new TapForUTFGridTestFragment();
 				break;
-			case 15:
+			case 14:
 				fragment = new CustomMarkerTestFragment();
 				break;
-			case 16:
+			case 15:
 				fragment = new RotatedMapTestFragment();
 				break;
-			case 17:
+			case 16:
 				fragment = new ClusteredMarkersTestFragment();
 				break;
-			case 18:
-				fragment = new MBTilesTestFragment();
-				break;
-            case 19:
-                fragment = new DraggableMarkersTestFragment();
-                break;
 			default:
 				fragment = new MainTestFragment();
 				break;
