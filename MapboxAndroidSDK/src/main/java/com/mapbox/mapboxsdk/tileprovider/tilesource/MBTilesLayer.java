@@ -36,7 +36,7 @@ public class MBTilesLayer extends TileLayer implements MapViewConstants, MapboxC
      * @param context the graphics drawing context
      */
     public MBTilesLayer(final Context context, final String url) {
-        super(url.substring(url.lastIndexOf('/') + 1, url.lastIndexOf('.')), url);
+        super(url.substring(url.lastIndexOf('/') + 1, url.lastIndexOf('.') > 0 ? url.lastIndexOf('.') : url.length() - 1), url);
         initialize(url, context);
     }
 
