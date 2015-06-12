@@ -75,7 +75,7 @@ public class SaveMapOfflineTestFragment extends Fragment implements MapboxConsta
         OfflineMapDownloader offlineMapDownloader = OfflineMapDownloader.getOfflineMapDownloader(getActivity());
         offlineMapDownloader.addOfflineMapDownloaderListener(this);
 
-        progressBar = (ProgressBar)view.findViewById(R.id.downloadProgress);
+        progressBar = (ProgressBar) view.findViewById(R.id.downloadProgress);
 
         return view;
     }

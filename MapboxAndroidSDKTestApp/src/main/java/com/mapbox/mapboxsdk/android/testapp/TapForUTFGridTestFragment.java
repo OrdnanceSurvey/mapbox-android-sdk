@@ -26,16 +26,16 @@ public class TapForUTFGridTestFragment extends Fragment {
 
         mv.setMapViewListener(new MapViewListener() {
             @Override
-            public void onShowMarker(MapView pMapView, Marker pMarker) {}
+            public void onShowMarker(MapView pMapView, Marker pMarker) { }
 
             @Override
-            public void onHideMarker(MapView pMapView, Marker pMarker) {}
+            public void onHideMarker(MapView pMapView, Marker pMarker) { }
 
             @Override
-            public void onTapMarker(MapView pMapView, Marker pMarker) {}
+            public void onTapMarker(MapView pMapView, Marker pMarker) { }
 
             @Override
-            public void onLongPressMarker(MapView pMapView, Marker pMarker) {}
+            public void onLongPressMarker(MapView pMapView, Marker pMarker) { }
 
             @Override
             public void onTapMap(MapView pMapView, ILatLng pPosition) {

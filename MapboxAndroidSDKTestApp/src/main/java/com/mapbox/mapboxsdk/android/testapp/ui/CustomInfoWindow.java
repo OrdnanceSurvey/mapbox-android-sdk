@@ -10,10 +10,10 @@ import com.mapbox.mapboxsdk.views.InfoWindow;
 import com.mapbox.mapboxsdk.views.MapView;
 
 public class CustomInfoWindow extends InfoWindow {
-    
+
     public CustomInfoWindow(MapView mv) {
         super(R.layout.infowindow_custom, mv);
-        
+
         // Add own OnTouchListener to customize handling InfoWindow touch events
         setOnTouchListener(new View.OnTouchListener() {
             @Override
