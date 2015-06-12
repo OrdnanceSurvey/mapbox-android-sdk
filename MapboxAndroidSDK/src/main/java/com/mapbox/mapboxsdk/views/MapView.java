@@ -318,6 +318,10 @@ public class MapView extends ViewGroup implements MapViewConstants, MapEventsRec
     }
 
     private void updateAfterSourceChange() {
+        if (mTileProvider.hasNoSource()) {
+            return;
+        }
+
         Projection.setTileSize(mTileProvider.getTileSizePixels());
         this.setScrollableAreaLimit(mTileProvider.getBoundingBox());
         this.setMinZoomLevel(mTileProvider.getMinimumZoomLevel());
