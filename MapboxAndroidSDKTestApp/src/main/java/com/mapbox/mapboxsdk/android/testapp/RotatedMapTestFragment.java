@@ -38,21 +38,21 @@ public class RotatedMapTestFragment extends Fragment {
 
         mv.setMapViewListener(new MapViewListener() {
             @Override
-            public void onShowMarker(MapView pMapView, Marker pMarker) {}
+            public void onShowMarker(MapView pMapView, Marker pMarker) { }
 
             @Override
-            public void onHideMarker(MapView pMapView, Marker pMarker) {}
+            public void onHideMarker(MapView pMapView, Marker pMarker) { }
 
             @Override
-            public void onTapMarker(MapView pMapView, Marker pMarker) {}
+            public void onTapMarker(MapView pMapView, Marker pMarker) { }
 
             @Override
-            public void onLongPressMarker(MapView pMapView, Marker pMarker) {}
+            public void onLongPressMarker(MapView pMapView, Marker pMarker) { }
 
             @Override
             public void onTapMap(MapView pMapView, ILatLng pPosition) {
                 String coords = String.format("Original Lat = %f, Lon = %f", pPosition.getLatitude(), pPosition.getLongitude());
-                float[] rc = {(float)pPosition.getLatitude(), (float)pPosition.getLongitude()};
+                float[] rc = { (float) pPosition.getLatitude(), (float) pPosition.getLongitude()};
                 Projection p = pMapView.getProjection();
                 p.rotatePoints(rc);
                 ILatLng rotLatLon = p.fromPixels(rc[0], rc[1]);
@@ -62,7 +62,7 @@ public class RotatedMapTestFragment extends Fragment {
             }
 
             @Override
-            public void onLongPressMap(MapView pMapView, ILatLng pPosition) {}
+            public void onLongPressMap(MapView pMapView, ILatLng pPosition) { }
         });
 
         return view;

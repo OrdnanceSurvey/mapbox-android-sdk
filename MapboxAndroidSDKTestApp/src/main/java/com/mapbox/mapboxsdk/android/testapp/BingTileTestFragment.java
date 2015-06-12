@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.mapbox.mapboxsdk.geometry.LatLng;
@@ -24,7 +23,7 @@ public class BingTileTestFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_bingtiletest, container, false);
 
         // Setup Map
-        mapView = (MapView)view.findViewById(R.id.mapview);
+        mapView = (MapView) view.findViewById(R.id.mapview);
 
         if (BING_KEY.isEmpty()) {
             Toast.makeText(inflater.getContext(), "BING_KEY needs to be defined", Toast.LENGTH_SHORT).show();
@@ -38,7 +37,7 @@ public class BingTileTestFragment extends Fragment {
         mapView.setCenter(new LatLng(34.19997, -118.17163));
         mapView.setZoom(12);
 
-        Button satButton = (Button)view.findViewById(R.id.satbut);
+        Button satButton = (Button) view.findViewById(R.id.satbut);
         satButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -46,7 +45,7 @@ public class BingTileTestFragment extends Fragment {
             }
         });
 
-        Button satLabButton = (Button)view.findViewById(R.id.satlabbut);
+        Button satLabButton = (Button) view.findViewById(R.id.satlabbut);
         satLabButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,7 +53,7 @@ public class BingTileTestFragment extends Fragment {
             }
         });
 
-        Button strButton = (Button)view.findViewById(R.id.strbut);
+        Button strButton = (Button) view.findViewById(R.id.strbut);
         strButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
