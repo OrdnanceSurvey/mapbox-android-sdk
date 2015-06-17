@@ -513,6 +513,7 @@ public class MapView extends ViewGroup implements MapViewConstants, MapEventsRec
         }
 
         this.getOverlays().add(itemizedOverlay);
+        invalidate();
     }
 
     /**
