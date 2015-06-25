@@ -91,7 +91,10 @@ public class MapTileLayerArray extends MapTileLayerBase {
     }
 
     private boolean networkAvailable() {
-        return mNetworkAvailabilityCheck == null || mNetworkAvailabilityCheck.getNetworkAvailable();
+        // Always return true to workaround issue where MBTiles don't load
+        // Mapbox issue: https://github.com/mapbox/mapbox-android-sdk/issues/595
+        // TODO: Ollie wants to fix this properly ;-p
+        return true;
     }
 
     /**
