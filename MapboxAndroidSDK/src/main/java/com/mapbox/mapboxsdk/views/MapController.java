@@ -8,6 +8,7 @@ import android.animation.TypeEvaluator;
 import android.graphics.PointF;
 import android.view.animation.LinearInterpolator;
 import com.mapbox.mapboxsdk.api.ILatLng;
+import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.mapbox.mapboxsdk.views.util.Projection;
 import com.mapbox.mapboxsdk.views.util.constants.MapViewConstants;
 import java.util.ArrayList;
@@ -105,6 +106,24 @@ public class MapController implements MapViewConstants {
 
     public boolean animateTo(final ILatLng point) {
         return animateTo(point, false);
+    }
+
+    /**
+     * @return the pending "move to" point or null if absent
+     */
+    public LatLng getPointToGoTo() {
+        if (mPointToGoTo == null) {
+            return null;
+        }
+        return new LatLng(mPointToGoTo.getLatitude(), mPointToGoTo.getLongitude(),
+            mPointToGoTo.getAltitude());
+    }
+
+    /**
+     * @return the pending "zoom to" value or -1 if absent
+     */
+    public float getZoomToZoomTo() {
+        return mZoomToZoomTo;
     }
 
     /**
