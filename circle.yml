@@ -1,0 +1,10 @@
+machine:
+  java:
+    version: oraclejdk8
+
+deployment:
+  master:
+    branch: mb-pages 
+    commands:
+      - ./gradlew uploadToNexus
+
