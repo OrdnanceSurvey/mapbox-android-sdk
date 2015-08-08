@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/mapbox/mapbox-android-sdk.svg?branch=mb-pages)](https://travis-ci.org/mapbox/mapbox-android-sdk)
 
+**Internal mb-pages Build Status:** [![Circle CI](https://circleci.com/gh/OrdnanceSurvey/mapbox-android-sdk.svg?style=svg)](https://circleci.com/gh/OrdnanceSurvey/mapbox-android-sdk)
+
 # Mapbox Android SDK
 
 An open source alternative for native maps on Android. This library lets
