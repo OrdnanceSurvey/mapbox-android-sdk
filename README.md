@@ -6,6 +6,9 @@ Heads-up that **this SDK is deprecated**.  Unlimited, per-user Mapbox pricing pl
 
 We are releasing Mapbox GL for Android very shortly.  This is the vector-based future of our rendering technology and will replace the Mapbox Android SDK.  We are working to provide a clear upgrade path between existing toolsets and GL as it matures.  For more information please see the [Mapbox Mobile](https://www.mapbox.com/mobile/) Web page as well as [Mapbox GL project repository](https://github.com/mapbox/mapbox-gl-native/).
 
+
+**Internal mb-pages Build Status:** [![Circle CI](https://circleci.com/gh/OrdnanceSurvey/mapbox-android-sdk.svg?style=svg)](https://circleci.com/gh/OrdnanceSurvey/mapbox-android-sdk)
+
 # Mapbox Android SDK
 
 An open source alternative for native maps on Android. This library lets
