@@ -1,5 +1,12 @@
 [![Build Status](https://travis-ci.org/mapbox/mapbox-android-sdk.svg?branch=mb-pages)](https://travis-ci.org/mapbox/mapbox-android-sdk)
 
+## SDK Deprecation & the Advent of Mapbox GL
+
+Heads-up that **this SDK is deprecated**.  Unlimited, per-user Mapbox pricing plans cannot be used with this version of the Android SDK.
+
+We are releasing Mapbox GL for Android very shortly.  This is the vector-based future of our rendering technology and will replace the Mapbox Android SDK.  We are working to provide a clear upgrade path between existing toolsets and GL as it matures.  For more information please see the [Mapbox Mobile](https://www.mapbox.com/mobile/) Web page as well as [Mapbox GL project repository](https://github.com/mapbox/mapbox-gl-native/).
+
+
 **Internal mb-pages Build Status:** [![Circle CI](https://circleci.com/gh/OrdnanceSurvey/mapbox-android-sdk.svg?style=svg)](https://circleci.com/gh/OrdnanceSurvey/mapbox-android-sdk)
 
 # Mapbox Android SDK
@@ -27,7 +34,7 @@ repositories {
 }
 
 dependencies {
-    compile ('com.mapbox.mapboxsdk:mapbox-android-sdk:0.7.3@aar'){
+    compile ('com.mapbox.mapboxsdk:mapbox-android-sdk:0.7.4@aar'){
         transitive=true
     }
 }
@@ -42,7 +49,7 @@ repositories {
 }
 
 dependencies {
-    compile ('com.mapbox.mapboxsdk:mapbox-android-sdk:0.7.4-SNAPSHOT@aar'){
+    compile ('com.mapbox.mapboxsdk:mapbox-android-sdk:0.7.5-SNAPSHOT@aar'){
         transitive=true
     }
 }
@@ -57,9 +64,9 @@ For a full example Android project incorporating the SDK in this manner, please 
 At any given time there will be 3 different versions of the SDK to use.  You're welcome to use whichever one makes the most sense for your project, just be aware that each comes with a different level of **stability**.
 
 1. Stable / Supported
- * Currently `0.7.3`
+ * Currently `0.7.4`
 2. SNAPSHOT
- * Currently `0.7.4-SNAPSHOT`
+ * Currently `0.7.5-SNAPSHOT`
 3. Source
 
 ### Manually / Hardcoding In Project
@@ -77,7 +84,7 @@ The Mapbox Android SDK is also packaged as a `.apklib` file.  This allows integr
 <dependency>
     <groupId>com.mapbox.mapboxsdk</groupId>
     <artifactId>mapbox-android-sdk</artifactId>
-    <version>0.7.3</version>
+    <version>0.7.4</version>
     <type>apklib</type>
 </dependency>
 ```
@@ -88,9 +95,9 @@ For more information on how to use Maven and Eclipse together please see Sonatyp
 
 The best way to make sure that the Mapbox Android SDK is setup properly (as well as updated as new versions are released) is to make use of Gradle or Maven as documented above.  However, if that's not possible the Mapbox Android SDK can also be added to the project by hardcoding it in.  Please note that this is **extremely** brittle and not scalable.  Here's the steps:
 
-1. Download the [mapbox-android-sdk-0.7.3.apklib](http://search.maven.org/remotecontent?filepath=com/mapbox/mapboxsdk/mapbox-android-sdk/0.7.3/mapbox-android-sdk-0.7.3.apklib).
+1. Download the [mapbox-android-sdk-0.7.4.apklib](http://search.maven.org/remotecontent?filepath=com/mapbox/mapboxsdk/mapbox-android-sdk/0.7.4/mapbox-android-sdk-0.7.4.apklib).
 2. Extract the source code and import it directly into the Eclipse project
-  * `jar xf mapbox-android-sdk-0.7.3.apklib`
+  * `jar xf mapbox-android-sdk-0.7.4.apklib`
 3. Download all `.jar` dependencies from [build.gradle](https://github.com/mapbox/mapbox-android-sdk/blob/mb-pages/MapboxAndroidSDK/build.gradle#L35-L39) and add to the Eclipse project as libaries.  Do NOT extract the content of these files.
   * **NOTE:** Make sure to also include all of the dependencies of these dependencies too.  This is done by looking at the POM files for each of the individual libraries on http://search.maven.com.  For example, [OkHttp](http://square.github.io/okhttp/) relies on [Okio](https://github.com/square/okio).  Failure to include all of them (and using their correct version) can cause the project to not compile and usually results in `java.lang.NoClassDefFoundError` errors.  This is one reason why we recommend using a Build Tool like Gradle or Maven.  :-)
 4. Automatically Included as of `0.6.0` ~~Download all `.java` files from [Cocoahero's GeoJSON library](https://github.com/cocoahero/android-geojson/tree/master/androidgeojson/src/main/java/com) and add to the Eclipse project's source code.~~
@@ -125,6 +132,16 @@ cd <PROJECT_ROOT>
 
 **Don't forget to then also include the dependencies from `MapboxAndroidSDK / build.gradle` in your classpath!**
 
+## Code Examples
+
+In addition to the [Quick-start Guide](https://github.com/mapbox/mapbox-android-sdk/blob/mb-pages/QUICKSTART.md), the `MapboxAndroidSDKTestApp` contains many code examples of commonly requested features.  It's also a fully runnable application that's used to test features of the SDK during development.
+
+* [Offline Tiles](https://github.com/mapbox/mapbox-android-sdk/blob/fe4f3696ea6f9e36da3cd8aee91dd8d0f1f259df/MapboxAndroidSDKTestApp/src/main/java/com/mapbox/mapboxsdk/android/testapp/SaveMapOfflineTestFragment.java)
+* [MBTiles](https://github.com/mapbox/mapbox-android-sdk/blob/fe4f3696ea6f9e36da3cd8aee91dd8d0f1f259df/MapboxAndroidSDKTestApp/src/main/java/com/mapbox/mapboxsdk/android/testapp/MBTilesTestFragment.java)
+* [Custom Markers and InfoWindows](https://github.com/mapbox/mapbox-android-sdk/blob/fe4f3696ea6f9e36da3cd8aee91dd8d0f1f259df/MapboxAndroidSDKTestApp/src/main/java/com/mapbox/mapboxsdk/android/testapp/CustomMarkerTestFragment.java)
+* [Marker Clustering](https://github.com/mapbox/mapbox-android-sdk/blob/fe4f3696ea6f9e36da3cd8aee91dd8d0f1f259df/MapboxAndroidSDKTestApp/src/main/java/com/mapbox/mapboxsdk/android/testapp/ClusteredMarkersTestFragment.java)
+* and [many more](https://github.com/mapbox/mapbox-android-sdk/tree/fe4f3696ea6f9e36da3cd8aee91dd8d0f1f259df/MapboxAndroidSDKTestApp/src/main/java/com/mapbox/mapboxsdk/android/testapp)!
+
 ## Changes from OSMDroid
 
 This project is a fork of OSMDroid, but is significantly different as the result of major refactoring and rethinking.
@@ -145,4 +162,3 @@ This project is a fork of OSMDroid, but is significantly different as the result
 
 The project's `master` branch is actually `mb-pages`.  There is no branch named `master` nor will there be.  The reason for it is that it allows some automatic processing and publishing of documentation behind the scenes.  In practice this shouldn't affect anybody wanting to contribute, but is something that will probably seem a bit "different" to newcomers.  Anyway, that's what's going on.  If you'd like more information please see [#404](https://github.com/mapbox/mapbox-android-sdk/issues/404) .
 
-## [Quick-start Guide](https://github.com/mapbox/mapbox-android-sdk/blob/mb-pages/QUICKSTART.md)

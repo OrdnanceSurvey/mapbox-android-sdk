@@ -62,7 +62,10 @@ public class RotatedMapTestFragment extends Fragment {
             }
 
             @Override
-            public void onLongPressMap(MapView pMapView, ILatLng pPosition) { }
+            public void onDoubleTapMap(MapView mapView, ILatLng iLatLng) {}
+
+            @Override
+            public void onLongPressMap(MapView pMapView, ILatLng pPosition) {}
         });
 
         return view;
