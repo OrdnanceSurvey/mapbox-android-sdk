@@ -666,9 +666,7 @@ public class MapView extends ViewGroup implements MapViewConstants, MapEventsRec
     public void onDoubleTap(final ILatLng p) {
         if (mMapViewListener != null) {
             mMapViewListener.onDoubleTapMap(MapView.this, p);
-        }
-        else
-        {
+        } else {
             this.zoomInFixing(p, false);
         }
     }
@@ -1827,7 +1825,9 @@ public class MapView extends ViewGroup implements MapViewConstants, MapEventsRec
         if (mListeners.size() > 0) {
             final ScrollEvent event = new ScrollEvent(this, intX, intY, mController.currentlyInUserAction());
             for (MapListener listener : mListeners) {
-                listener.onScroll(event);
+                if (listener != null) {
+                    listener.onScroll(event);
+                }
             }
         }
     }
@@ -2136,6 +2136,7 @@ public class MapView extends ViewGroup implements MapViewConstants, MapEventsRec
 
     /**
      * Allows to disable the tooltip displayed on marker click.
+     *
      * @param enable
      */
     public void setBubbleEnabled(boolean enable) {
