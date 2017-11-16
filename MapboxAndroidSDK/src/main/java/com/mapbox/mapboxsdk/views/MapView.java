@@ -627,7 +627,9 @@ public class MapView extends ViewGroup implements MapViewConstants, MapEventsRec
         if (mListeners.size() > 0) {
             final ZoomEvent event = new ZoomEvent(this, mZoomLevel, false);
             for (MapListener listener : mListeners) {
-                listener.onZoom(event);
+                if (listener != null) {
+                    listener.onZoom(event);
+                }
             }
         }
     }
@@ -894,7 +896,6 @@ public class MapView extends ViewGroup implements MapViewConstants, MapEventsRec
             }
         }
 
-
         mProjection = new Projection(this);
         // snap for all snappables
         snapItems();
@@ -907,7 +908,9 @@ public class MapView extends ViewGroup implements MapViewConstants, MapEventsRec
         if (newZoomLevel != curZoomLevel && mListeners.size() > 0) {
             final ZoomEvent event = new ZoomEvent(this, newZoomLevel, mController.currentlyInUserAction());
             for (MapListener listener : mListeners) {
-                listener.onZoom(event);
+                if (listener != null) {
+                    listener.onZoom(event);
+                }
             }
         }
 
