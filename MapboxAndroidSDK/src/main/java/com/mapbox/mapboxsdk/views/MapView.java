@@ -110,6 +110,7 @@ public class MapView extends ViewGroup implements MapViewConstants, MapEventsRec
     protected float mRequestedMinimumZoomLevel = 0;
     private float mMinimumZoomLevel = 0;
     private float mMaximumZoomLevel = 22;
+    private float mMaximumApiZoomLevel = 22;
 
     /**
      * The MapView listener
@@ -373,6 +374,7 @@ public class MapView extends ViewGroup implements MapViewConstants, MapEventsRec
     public void addTileSource(final ITileLayer aTileSource) {
         if (aTileSource != null && mTileProvider != null && mTileProvider instanceof MapTileLayerBasic) {
             ((MapTileLayerBasic) mTileProvider).addTileSource(aTileSource);
+            setMaxApiZoomLevel(aTileSource.getMaximumApiZoomLevel());
             updateAfterSourceChange();
         }
     }
@@ -883,6 +885,7 @@ public class MapView extends ViewGroup implements MapViewConstants, MapEventsRec
             if (newZoomLevel > curZoomLevel) {
                 // We are going from a lower-resolution plane to a higher-resolution plane, so we have
                 // to do it the hard way.
+
                 final int worldSize_new_2 = Projection.mapSize(newZoomLevel) >> 1;
                 final ILatLng centerGeoPoint = getCenter();
                 final PointF centerPoint = Projection.latLongToPixelXY(centerGeoPoint.getLatitude(),
@@ -901,7 +904,7 @@ public class MapView extends ViewGroup implements MapViewConstants, MapEventsRec
         snapItems();
 
         if (isLayedOut()) {
-            getMapOverlay().rescaleCache(newZoomLevel, curZoomLevel, getProjection());
+            getMapOverlay().rescaleCache(newZoomLevel, curZoomLevel, getProjection(), mMaximumApiZoomLevel);
         }
 
         // do callback on listener
@@ -1119,6 +1122,14 @@ public class MapView extends ViewGroup implements MapViewConstants, MapEventsRec
      */
     public void setMaxZoomLevel(float zoomLevel) {
         mMaximumZoomLevel = zoomLevel;
+    }
+
+    public void setMaxApiZoomLevel(float zoomLevel) {
+        mMaximumApiZoomLevel = zoomLevel;
+    }
+
+    public float getMaxApiZoomLevel() {
+        return mMaximumApiZoomLevel;
     }
 
     /**
