@@ -110,7 +110,7 @@ public class MapView extends ViewGroup implements MapViewConstants, MapEventsRec
     protected float mRequestedMinimumZoomLevel = 0;
     private float mMinimumZoomLevel = 0;
     private float mMaximumZoomLevel = 22;
-    private float mMaximumApiZoomLevel = 22;
+    private float mMaximumApiZoomLevel = 16.99f;
 
     /**
      * The MapView listener
