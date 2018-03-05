@@ -42,6 +42,8 @@ public interface ITileLayer {
      */
     public float getMaximumZoomLevel();
 
+    public float getMaximumApiZoomLevel();
+
     /**
      * Get the tile size in pixels this tile source provides.
      *

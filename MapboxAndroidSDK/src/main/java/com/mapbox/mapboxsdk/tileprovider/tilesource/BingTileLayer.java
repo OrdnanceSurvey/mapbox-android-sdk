@@ -37,6 +37,7 @@ public class BingTileLayer extends WebSourceTileLayer {
         // Default Bing Maps zoom levels.
         this.setMinimumZoomLevel(1);
         this.setMaximumZoomLevel(22);
+        this.setMaximumApiZoomLevel(22);
 
         getMetadata();
     }

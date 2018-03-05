@@ -19,6 +19,7 @@ public class TileLayer implements ITileLayer, TileLayerConstants, MapViewConstan
 
     protected float mMinimumZoomLevel = TileLayerConstants.MINIMUM_ZOOMLEVEL;
     protected float mMaximumZoomLevel = TileLayerConstants.MAXIMUM_ZOOMLEVEL;
+    protected float mMaximumApiZoomLevel = TileLayerConstants.MAXIMUM_ZOOMLEVEL;
     protected BoundingBox mBoundingBox = WORLD_BOUNDING_BOX;
     protected LatLng mCenter = new LatLng(0, 0);
     private final int mTileSizePixels = DEFAULT_TILE_SIZE;
@@ -69,10 +70,15 @@ public class TileLayer implements ITileLayer, TileLayerConstants, MapViewConstan
     }
 
     /**
-     * Sets the layer's minimum zoom level.
+     * Sets the layer's maximum zoom level.
      */
     public TileLayer setMaximumZoomLevel(final float aMaximumZoomLevel) {
         this.mMaximumZoomLevel = aMaximumZoomLevel;
+        return this;
+    }
+
+    public TileLayer setMaximumApiZoomLevel(final float aMaximumZoomLevel) {
+        this.mMaximumApiZoomLevel = aMaximumZoomLevel;
         return this;
     }
 
@@ -94,6 +100,11 @@ public class TileLayer implements ITileLayer, TileLayerConstants, MapViewConstan
     @Override
     public float getMaximumZoomLevel() {
         return mMaximumZoomLevel;
+    }
+
+    @Override
+    public float getMaximumApiZoomLevel() {
+        return mMaximumApiZoomLevel;
     }
 
     @Override

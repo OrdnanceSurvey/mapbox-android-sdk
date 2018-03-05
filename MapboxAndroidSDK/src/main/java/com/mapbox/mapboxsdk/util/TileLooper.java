@@ -4,10 +4,13 @@ import android.graphics.Canvas;
 import android.graphics.Point;
 import android.graphics.Rect;
 import android.os.Handler;
+
 import com.mapbox.mapboxsdk.tileprovider.MapTile;
 import com.mapbox.mapboxsdk.views.util.Projection;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import uk.co.senab.bitmapcache.CacheableBitmapDrawable;
 
 /**
@@ -22,7 +25,8 @@ public abstract class TileLooper {
             new ArrayList<CacheableBitmapDrawable>();
 
     public final int loop(final Canvas pCanvas, final String pCacheKey, final float pZoomLevel,
-            final int pTileSizePx, final Rect pViewPort, final Rect pClipRect) {
+                          final float pMaxApiZoom, final int pTileSizePx, final Rect pViewPort,
+                          final Rect pClipRect) {
         // Calculate the amount of tiles needed for each side around the center one.
         Projection.pixelXYToTileXY(pViewPort.left, pViewPort.top, mUpperLeft);
         mUpperLeft.offset(-1, -1);
@@ -37,25 +41,25 @@ public abstract class TileLooper {
         initializeLoop(pZoomLevel, pTileSizePx);
 
         int tileX, tileY;
-
         for (int y = mUpperLeft.y; y <= mLowerRight.y; y++) {
             for (int x = mUpperLeft.x; x <= mLowerRight.x; x++) {
                 tileY = GeometryMath.mod(y, mapTileUpperBound);
                 tileX = GeometryMath.mod(x, mapTileUpperBound);
                 final MapTile tile = new MapTile(pCacheKey, roundedZoom, tileX, tileY);
-                handleTile(pCanvas, pCacheKey, pTileSizePx, tile, x, y, pClipRect);
+                handleTile(pCanvas, pCacheKey, pTileSizePx, tile, x, y, pClipRect, pMaxApiZoom);
             }
         }
         finalizeLoop();
 
         /* return number of tiles looped */
-        return  (mLowerRight.y - mUpperLeft.y) * (mLowerRight.x - mUpperLeft.x);
+        return (mLowerRight.y - mUpperLeft.y) * (mLowerRight.x - mUpperLeft.x);
     }
 
     public abstract void initializeLoop(float pZoomLevel, int pTileSizePx);
 
     public abstract void handleTile(Canvas pCanvas, final String pCacheKey, int pTileSizePx,
-            MapTile pTile, int pX, int pY, final Rect pClipRect);
+                                    MapTile pTile, int pX, int pY, final Rect pClipRect,
+                                    final float pMaxApiZoom);
 
     public void finalizeLoop() {
         //we delay just to make sure drawable bitmaps are not reused while being drawn.

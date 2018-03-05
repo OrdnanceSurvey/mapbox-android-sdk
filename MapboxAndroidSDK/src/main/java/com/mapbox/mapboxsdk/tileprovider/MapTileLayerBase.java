@@ -67,6 +67,10 @@ public abstract class MapTileLayerBase implements IMapTileProviderCallback, Tile
         return mTileSource.getMaximumZoomLevel();
     }
 
+    public float getMaximumApiZoomLevel() {
+        return mTileSource.getMaximumApiZoomLevel();
+    }
+
     /**
      * Get the tile size in pixels this tile provider provides.
      *
