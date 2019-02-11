@@ -155,7 +155,7 @@ dependencies {
         <p>The Mapbox Android SDK is also packaged as a <code>.apklib</code> file. This allows integration with older tools (Eclipse) that don't support the <code>.aar</code> format yet. In order to make this work the project will need to make use of <a href="http://maven.apache.org/" target="_blank">Maven</a>, and it the case of Eclipse the <a href="http://eclipse.org/m2e/" target="_blank">M2Eclipse</a> Maven plugin. From there configure the Maven pom.xml to include the following dependency:</p>
 {% highlight xml %}
 <dependency>
-    <groupId>com.mapbox.mapboxsdk</groupId>
+    <groupId>com.mapbox.legacy</groupId>
     <artifactId>mapbox-android-sdk</artifactId>
     <version>0.7.4</version>
     <type>apklib</type>

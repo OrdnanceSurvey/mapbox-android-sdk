@@ -35,8 +35,8 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/ITileLayer.html" title="interface in com.mapbox.mapboxsdk.tileprovider.tilesource"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/MBTilesLayer.html" title="class in com.mapbox.mapboxsdk.tileprovider.tilesource"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/ITileLayer.html" title="interface in com.mapbox.legacy.tileprovider.tilesource"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/MBTilesLayer.html" title="class in com.mapbox.legacy.tileprovider.tilesource"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?com/mapbox/mapboxsdk/tileprovider/tilesource/MapboxTileLayer.html" target="_top">Frames</a></li>
@@ -61,7 +61,7 @@
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_com.mapbox.mapboxsdk.tileprovider.tilesource.WebSourceTileLayer">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#fields_inherited_from_class_com.mapbox.legacy.tileprovider.tilesource.WebSourceTileLayer">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>
@@ -78,7 +78,7 @@
 <!-- ========= END OF TOP NAVBAR ========= -->
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="subTitle">com.mapbox.mapboxsdk.tileprovider.tilesource</div>
+<div class="subTitle">com.mapbox.legacy.tileprovider.tilesource</div>
 <h2 title="Class MapboxTileLayer" class="title">Class MapboxTileLayer</h2>
 </div>
 <div class="contentContainer">
@@ -86,16 +86,16 @@
 <li><a href="http://docs.oracle.com/javase/7/docs/api/java/lang/Object.html?is-external=true" title="class or interface in java.lang">java.lang.Object</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html" title="class in com.mapbox.mapboxsdk.tileprovider.tilesource">com.mapbox.mapboxsdk.tileprovider.tilesource.TileLayer</a></li>
+<li><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html" title="class in com.mapbox.legacy.tileprovider.tilesource">com.mapbox.legacy.tileprovider.tilesource.TileLayer</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/WebSourceTileLayer.html" title="class in com.mapbox.mapboxsdk.tileprovider.tilesource">com.mapbox.mapboxsdk.tileprovider.tilesource.WebSourceTileLayer</a></li>
+<li><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/WebSourceTileLayer.html" title="class in com.mapbox.legacy.tileprovider.tilesource">com.mapbox.legacy.tileprovider.tilesource.WebSourceTileLayer</a></li>
 <li>
 <ul class="inheritance">
-<li><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileJsonTileLayer.html" title="class in com.mapbox.mapboxsdk.tileprovider.tilesource">com.mapbox.mapboxsdk.tileprovider.tilesource.TileJsonTileLayer</a></li>
+<li><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileJsonTileLayer.html" title="class in com.mapbox.legacy.tileprovider.tilesource">com.mapbox.legacy.tileprovider.tilesource.TileJsonTileLayer</a></li>
 <li>
 <ul class="inheritance">
-<li>com.mapbox.mapboxsdk.tileprovider.tilesource.MapboxTileLayer</li>
+<li>com.mapbox.legacy.tileprovider.tilesource.MapboxTileLayer</li>
 </ul>
 </li>
 </ul>
@@ -110,13 +110,13 @@
 <li class="blockList">
 <dl>
 <dt>All Implemented Interfaces:</dt>
-<dd><a href="../../../../../com/mapbox/mapboxsdk/constants/MapboxConstants.html" title="interface in com.mapbox.mapboxsdk.constants">MapboxConstants</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/constants/TileLayerConstants.html" title="interface in com.mapbox.mapboxsdk.tileprovider.constants">TileLayerConstants</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/ITileLayer.html" title="interface in com.mapbox.mapboxsdk.tileprovider.tilesource">ITileLayer</a>, <a href="../../../../../com/mapbox/mapboxsdk/views/util/constants/MapViewConstants.html" title="interface in com.mapbox.mapboxsdk.views.util.constants">MapViewConstants</a></dd>
+<dd><a href="../../../../../com/mapbox/mapboxsdk/constants/MapboxConstants.html" title="interface in com.mapbox.legacy.constants">MapboxConstants</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/constants/TileLayerConstants.html" title="interface in com.mapbox.legacy.tileprovider.constants">TileLayerConstants</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/ITileLayer.html" title="interface in com.mapbox.legacy.tileprovider.tilesource">ITileLayer</a>, <a href="../../../../../com/mapbox/mapboxsdk/views/util/constants/MapViewConstants.html" title="interface in com.mapbox.legacy.views.util.constants">MapViewConstants</a></dd>
 </dl>
 <hr>
 <br>
 <pre>public class <span class="strong">MapboxTileLayer</span>
-extends <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileJsonTileLayer.html" title="class in com.mapbox.mapboxsdk.tileprovider.tilesource">TileJsonTileLayer</a>
-implements <a href="../../../../../com/mapbox/mapboxsdk/views/util/constants/MapViewConstants.html" title="interface in com.mapbox.mapboxsdk.views.util.constants">MapViewConstants</a>, <a href="../../../../../com/mapbox/mapboxsdk/constants/MapboxConstants.html" title="interface in com.mapbox.mapboxsdk.constants">MapboxConstants</a></pre>
+extends <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileJsonTileLayer.html" title="class in com.mapbox.legacy.tileprovider.tilesource">TileJsonTileLayer</a>
+implements <a href="../../../../../com/mapbox/mapboxsdk/views/util/constants/MapViewConstants.html" title="interface in com.mapbox.legacy.views.util.constants">MapViewConstants</a>, <a href="../../../../../com/mapbox/mapboxsdk/constants/MapboxConstants.html" title="interface in com.mapbox.legacy.constants">MapboxConstants</a></pre>
 <div class="block">A convenience class to initialize tile layers that use Mapbox services.
  Underneath, this initializes a WebSourceTileLayer, but provides conveniences
  for retina tiles, initialization by ID, and loading over SSL.</div>
@@ -133,11 +133,11 @@ implements <a href="../../../../../com/mapbox/mapboxsdk/views/util/constants/Map
 </a>
 <h3>Nested Class Summary</h3>
 <ul class="blockList">
-<li class="blockList"><a name="nested_classes_inherited_from_class_com.mapbox.mapboxsdk.constants.MapboxConstants">
+<li class="blockList"><a name="nested_classes_inherited_from_class_com.mapbox.legacy.constants.MapboxConstants">
 <!--   -->
 </a>
-<h3>Nested classes/interfaces inherited from interface&nbsp;com.mapbox.mapboxsdk.constants.<a href="../../../../../com/mapbox/mapboxsdk/constants/MapboxConstants.html" title="interface in com.mapbox.mapboxsdk.constants">MapboxConstants</a></h3>
-<code><a href="../../../../../com/mapbox/mapboxsdk/constants/MapboxConstants.RasterImageQuality.html" title="enum in com.mapbox.mapboxsdk.constants">MapboxConstants.RasterImageQuality</a></code></li>
+<h3>Nested classes/interfaces inherited from interface&nbsp;com.mapbox.mapboxsdk.constants.<a href="../../../../../com/mapbox/mapboxsdk/constants/MapboxConstants.html" title="interface in com.mapbox.legacy.constants">MapboxConstants</a></h3>
+<code><a href="../../../../../com/mapbox/mapboxsdk/constants/MapboxConstants.RasterImageQuality.html" title="enum in com.mapbox.legacy.constants">MapboxConstants.RasterImageQuality</a></code></li>
 </ul>
 </li>
 </ul>
@@ -148,38 +148,38 @@ implements <a href="../../../../../com/mapbox/mapboxsdk/views/util/constants/Map
 </a>
 <h3>Field Summary</h3>
 <ul class="blockList">
-<li class="blockList"><a name="fields_inherited_from_class_com.mapbox.mapboxsdk.tileprovider.tilesource.WebSourceTileLayer">
+<li class="blockList"><a name="fields_inherited_from_class_com.mapbox.legacy.tileprovider.tilesource.WebSourceTileLayer">
 <!--   -->
 </a>
-<h3>Fields inherited from class&nbsp;com.mapbox.mapboxsdk.tileprovider.tilesource.<a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/WebSourceTileLayer.html" title="class in com.mapbox.mapboxsdk.tileprovider.tilesource">WebSourceTileLayer</a></h3>
+<h3>Fields inherited from class&nbsp;com.mapbox.mapboxsdk.tileprovider.tilesource.<a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/WebSourceTileLayer.html" title="class in com.mapbox.legacy.tileprovider.tilesource">WebSourceTileLayer</a></h3>
 <code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/WebSourceTileLayer.html#mEnableSSL">mEnableSSL</a></code></li>
 </ul>
 <ul class="blockList">
-<li class="blockList"><a name="fields_inherited_from_class_com.mapbox.mapboxsdk.tileprovider.tilesource.TileLayer">
+<li class="blockList"><a name="fields_inherited_from_class_com.mapbox.legacy.tileprovider.tilesource.TileLayer">
 <!--   -->
 </a>
-<h3>Fields inherited from class&nbsp;com.mapbox.mapboxsdk.tileprovider.tilesource.<a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html" title="class in com.mapbox.mapboxsdk.tileprovider.tilesource">TileLayer</a></h3>
+<h3>Fields inherited from class&nbsp;com.mapbox.mapboxsdk.tileprovider.tilesource.<a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html" title="class in com.mapbox.legacy.tileprovider.tilesource">TileLayer</a></h3>
 <code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#mAttribution">mAttribution</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#mBoundingBox">mBoundingBox</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#mCacheKey">mCacheKey</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#mCenter">mCenter</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#mDescription">mDescription</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#mLegend">mLegend</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#mMaximumZoomLevel">mMaximumZoomLevel</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#mMinimumZoomLevel">mMinimumZoomLevel</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#mName">mName</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#mUrl">mUrl</a></code></li>
 </ul>
 <ul class="blockList">
-<li class="blockList"><a name="fields_inherited_from_class_com.mapbox.mapboxsdk.views.util.constants.MapViewConstants">
+<li class="blockList"><a name="fields_inherited_from_class_com.mapbox.legacy.views.util.constants.MapViewConstants">
 <!--   -->
 </a>
-<h3>Fields inherited from interface&nbsp;com.mapbox.mapboxsdk.views.util.constants.<a href="../../../../../com/mapbox/mapboxsdk/views/util/constants/MapViewConstants.html" title="interface in com.mapbox.mapboxsdk.views.util.constants">MapViewConstants</a></h3>
+<h3>Fields inherited from interface&nbsp;com.mapbox.mapboxsdk.views.util.constants.<a href="../../../../../com/mapbox/mapboxsdk/views/util/constants/MapViewConstants.html" title="interface in com.mapbox.legacy.views.util.constants">MapViewConstants</a></h3>
 <code><a href="../../../../../com/mapbox/mapboxsdk/views/util/constants/MapViewConstants.html#ANIMATION_DURATION_DEFAULT">ANIMATION_DURATION_DEFAULT</a>, <a href="../../../../../com/mapbox/mapboxsdk/views/util/constants/MapViewConstants.html#ANIMATION_DURATION_SHORT">ANIMATION_DURATION_SHORT</a>, <a href="../../../../../com/mapbox/mapboxsdk/views/util/constants/MapViewConstants.html#DEFAULT_PIN_ANCHOR">DEFAULT_PIN_ANCHOR</a></code></li>
 </ul>
 <ul class="blockList">
-<li class="blockList"><a name="fields_inherited_from_class_com.mapbox.mapboxsdk.constants.MapboxConstants">
+<li class="blockList"><a name="fields_inherited_from_class_com.mapbox.legacy.constants.MapboxConstants">
 <!--   -->
 </a>
-<h3>Fields inherited from interface&nbsp;com.mapbox.mapboxsdk.constants.<a href="../../../../../com/mapbox/mapboxsdk/constants/MapboxConstants.html" title="interface in com.mapbox.mapboxsdk.constants">MapboxConstants</a></h3>
+<h3>Fields inherited from interface&nbsp;com.mapbox.mapboxsdk.constants.<a href="../../../../../com/mapbox/mapboxsdk/constants/MapboxConstants.html" title="interface in com.mapbox.legacy.constants">MapboxConstants</a></h3>
 <code><a href="../../../../../com/mapbox/mapboxsdk/constants/MapboxConstants.html#MAPBOX_BASE_URL_V4">MAPBOX_BASE_URL_V4</a>, <a href="../../../../../com/mapbox/mapboxsdk/constants/MapboxConstants.html#MAPBOX_LOCALE">MAPBOX_LOCALE</a>, <a href="../../../../../com/mapbox/mapboxsdk/constants/MapboxConstants.html#USER_AGENT">USER_AGENT</a></code></li>
 </ul>
 <ul class="blockList">
-<li class="blockList"><a name="fields_inherited_from_class_com.mapbox.mapboxsdk.tileprovider.constants.TileLayerConstants">
+<li class="blockList"><a name="fields_inherited_from_class_com.mapbox.legacy.tileprovider.constants.TileLayerConstants">
 <!--   -->
 </a>
-<h3>Fields inherited from interface&nbsp;com.mapbox.mapboxsdk.tileprovider.constants.<a href="../../../../../com/mapbox/mapboxsdk/tileprovider/constants/TileLayerConstants.html" title="interface in com.mapbox.mapboxsdk.tileprovider.constants">TileLayerConstants</a></h3>
+<h3>Fields inherited from interface&nbsp;com.mapbox.mapboxsdk.tileprovider.constants.<a href="../../../../../com/mapbox/mapboxsdk/tileprovider/constants/TileLayerConstants.html" title="interface in com.mapbox.legacy.tileprovider.constants">TileLayerConstants</a></h3>
 <code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/constants/TileLayerConstants.html#CACHE_MAPTILECOUNT_DEFAULT">CACHE_MAPTILECOUNT_DEFAULT</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/constants/TileLayerConstants.html#CACHE_MAPTILEDISKSIZE_DEFAULT">CACHE_MAPTILEDISKSIZE_DEFAULT</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/constants/TileLayerConstants.html#DEBUG_TILE_PROVIDERS">DEBUG_TILE_PROVIDERS</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/constants/TileLayerConstants.html#DEFAULT_TILE_SIZE">DEFAULT_TILE_SIZE</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/constants/TileLayerConstants.html#MAXIMUM_ZOOMLEVEL">MAXIMUM_ZOOMLEVEL</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/constants/TileLayerConstants.html#MINIMUM_ZOOMLEVEL">MINIMUM_ZOOMLEVEL</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/constants/TileLayerConstants.html#NUMBER_OF_TILE_DOWNLOAD_THREADS">NUMBER_OF_TILE_DOWNLOAD_THREADS</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/constants/TileLayerConstants.html#RETINA_TILE_SIZE">RETINA_TILE_SIZE</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/constants/TileLayerConstants.html#TILE_DOWNLOAD_MAXIMUM_QUEUE_SIZE">TILE_DOWNLOAD_MAXIMUM_QUEUE_SIZE</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/constants/TileLayerConstants.html#WORLD_BOUNDING_BOX">WORLD_BOUNDING_BOX</a></code></li>
 </ul>
 </li>
@@ -236,31 +236,31 @@ implements <a href="../../../../../com/mapbox/mapboxsdk/views/util/constants/Map
           boolean&nbsp;enableSSL)</code>&nbsp;</td>
 </tr>
 <tr class="rowColor">
-<td class="colFirst"><code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html" title="class in com.mapbox.mapboxsdk.tileprovider.tilesource">TileLayer</a></code></td>
+<td class="colFirst"><code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html" title="class in com.mapbox.legacy.tileprovider.tilesource">TileLayer</a></code></td>
 <td class="colLast"><code><strong><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/MapboxTileLayer.html#setURL(java.lang.String)">setURL</a></strong>(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aUrl)</code>
 <div class="block">Sets the layer's tile URL template string.</div>
 </td>
 </tr>
 </table>
 <ul class="blockList">
-<li class="blockList"><a name="methods_inherited_from_class_com.mapbox.mapboxsdk.tileprovider.tilesource.TileJsonTileLayer">
+<li class="blockList"><a name="methods_inherited_from_class_com.mapbox.legacy.tileprovider.tilesource.TileJsonTileLayer">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;com.mapbox.mapboxsdk.tileprovider.tilesource.<a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileJsonTileLayer.html" title="class in com.mapbox.mapboxsdk.tileprovider.tilesource">TileJsonTileLayer</a></h3>
+<h3>Methods inherited from class&nbsp;com.mapbox.mapboxsdk.tileprovider.tilesource.<a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileJsonTileLayer.html" title="class in com.mapbox.legacy.tileprovider.tilesource">TileJsonTileLayer</a></h3>
 <code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileJsonTileLayer.html#getTileJSON()">getTileJSON</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileJsonTileLayer.html#setTileJSON(org.json.JSONObject)">setTileJSON</a></code></li>
 </ul>
 <ul class="blockList">
-<li class="blockList"><a name="methods_inherited_from_class_com.mapbox.mapboxsdk.tileprovider.tilesource.WebSourceTileLayer">
+<li class="blockList"><a name="methods_inherited_from_class_com.mapbox.legacy.tileprovider.tilesource.WebSourceTileLayer">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;com.mapbox.mapboxsdk.tileprovider.tilesource.<a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/WebSourceTileLayer.html" title="class in com.mapbox.mapboxsdk.tileprovider.tilesource">WebSourceTileLayer</a></h3>
+<h3>Methods inherited from class&nbsp;com.mapbox.mapboxsdk.tileprovider.tilesource.<a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/WebSourceTileLayer.html" title="class in com.mapbox.legacy.tileprovider.tilesource">WebSourceTileLayer</a></h3>
 <code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/WebSourceTileLayer.html#getBitmapFromURL(com.mapbox.mapboxsdk.tileprovider.MapTile,%20java.lang.String,%20com.mapbox.mapboxsdk.tileprovider.MapTileCache)">getBitmapFromURL</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/WebSourceTileLayer.html#getDrawableFromTile(com.mapbox.mapboxsdk.tileprovider.modules.MapTileDownloader,%20com.mapbox.mapboxsdk.tileprovider.MapTile,%20boolean)">getDrawableFromTile</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/WebSourceTileLayer.html#getTileURL(com.mapbox.mapboxsdk.tileprovider.MapTile,%20boolean)">getTileURL</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/WebSourceTileLayer.html#getTileURLs(com.mapbox.mapboxsdk.tileprovider.MapTile,%20boolean)">getTileURLs</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/WebSourceTileLayer.html#parseUrlForTile(java.lang.String,%20com.mapbox.mapboxsdk.tileprovider.MapTile,%20boolean)">parseUrlForTile</a></code></li>
 </ul>
 <ul class="blockList">
-<li class="blockList"><a name="methods_inherited_from_class_com.mapbox.mapboxsdk.tileprovider.tilesource.TileLayer">
+<li class="blockList"><a name="methods_inherited_from_class_com.mapbox.legacy.tileprovider.tilesource.TileLayer">
 <!--   -->
 </a>
-<h3>Methods inherited from class&nbsp;com.mapbox.mapboxsdk.tileprovider.tilesource.<a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html" title="class in com.mapbox.mapboxsdk.tileprovider.tilesource">TileLayer</a></h3>
+<h3>Methods inherited from class&nbsp;com.mapbox.mapboxsdk.tileprovider.tilesource.<a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html" title="class in com.mapbox.legacy.tileprovider.tilesource">TileLayer</a></h3>
 <code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#detach()">detach</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#getAttribution()">getAttribution</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#getBoundingBox()">getBoundingBox</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#getCenterCoordinate()">getCenterCoordinate</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#getCenterZoom()">getCenterZoom</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#getDescription()">getDescription</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#getLegend()">getLegend</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#getMaximumZoomLevel()">getMaximumZoomLevel</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#getMinimumZoomLevel()">getMinimumZoomLevel</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#getName()">getName</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#getTileSizePixels()">getTileSizePixels</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#setAttribution(java.lang.String)">setAttribution</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#setDescription(java.lang.String)">setDescription</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#setMaximumZoomLevel(float)">setMaximumZoomLevel</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#setMinimumZoomLevel(float)">setMinimumZoomLevel</a>, <a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#setName(java.lang.String)">setName</a></code></li>
 </ul>
 <ul class="blockList">
@@ -324,7 +324,7 @@ implements <a href="../../../../../com/mapbox/mapboxsdk/views/util/constants/Map
               boolean&nbsp;enableSSL)</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
-<dd><code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/WebSourceTileLayer.html#initialize(java.lang.String,%20java.lang.String,%20boolean)">initialize</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/WebSourceTileLayer.html" title="class in com.mapbox.mapboxsdk.tileprovider.tilesource">WebSourceTileLayer</a></code></dd>
+<dd><code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/WebSourceTileLayer.html#initialize(java.lang.String,%20java.lang.String,%20boolean)">initialize</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/WebSourceTileLayer.html" title="class in com.mapbox.legacy.tileprovider.tilesource">WebSourceTileLayer</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -334,14 +334,14 @@ implements <a href="../../../../../com/mapbox/mapboxsdk/views/util/constants/Map
 <ul class="blockList">
 <li class="blockList">
 <h4>setURL</h4>
-<pre>public&nbsp;<a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html" title="class in com.mapbox.mapboxsdk.tileprovider.tilesource">TileLayer</a>&nbsp;setURL(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aUrl)</pre>
+<pre>public&nbsp;<a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html" title="class in com.mapbox.legacy.tileprovider.tilesource">TileLayer</a>&nbsp;setURL(<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;aUrl)</pre>
 <div class="block"><strong>Description copied from class:&nbsp;<code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#setURL(java.lang.String)">TileLayer</a></code></strong></div>
 <div class="block">Sets the layer's tile URL template string.</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/ITileLayer.html#setURL(java.lang.String)">setURL</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/ITileLayer.html" title="interface in com.mapbox.mapboxsdk.tileprovider.tilesource">ITileLayer</a></code></dd>
+<dd><code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/ITileLayer.html#setURL(java.lang.String)">setURL</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/ITileLayer.html" title="interface in com.mapbox.legacy.tileprovider.tilesource">ITileLayer</a></code></dd>
 <dt><strong>Overrides:</strong></dt>
-<dd><code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/WebSourceTileLayer.html#setURL(java.lang.String)">setURL</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/WebSourceTileLayer.html" title="class in com.mapbox.mapboxsdk.tileprovider.tilesource">WebSourceTileLayer</a></code></dd>
+<dd><code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/WebSourceTileLayer.html#setURL(java.lang.String)">setURL</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/WebSourceTileLayer.html" title="class in com.mapbox.legacy.tileprovider.tilesource">WebSourceTileLayer</a></code></dd>
 <dt><span class="strong">Returns:</span></dt><dd>the tile layer</dd></dl>
 </li>
 </ul>
@@ -354,7 +354,7 @@ implements <a href="../../../../../com/mapbox/mapboxsdk/views/util/constants/Map
 <pre>protected&nbsp;<a href="http://docs.oracle.com/javase/7/docs/api/java/lang/String.html?is-external=true" title="class or interface in java.lang">String</a>&nbsp;getBrandedJSONURL()</pre>
 <dl>
 <dt><strong>Overrides:</strong></dt>
-<dd><code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileJsonTileLayer.html#getBrandedJSONURL()">getBrandedJSONURL</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileJsonTileLayer.html" title="class in com.mapbox.mapboxsdk.tileprovider.tilesource">TileJsonTileLayer</a></code></dd>
+<dd><code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileJsonTileLayer.html#getBrandedJSONURL()">getBrandedJSONURL</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileJsonTileLayer.html" title="class in com.mapbox.legacy.tileprovider.tilesource">TileJsonTileLayer</a></code></dd>
 </dl>
 </li>
 </ul>
@@ -369,9 +369,9 @@ implements <a href="../../../../../com/mapbox/mapboxsdk/views/util/constants/Map
 <div class="block">Get the cache key used for the disk cache</div>
 <dl>
 <dt><strong>Specified by:</strong></dt>
-<dd><code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/ITileLayer.html#getCacheKey()">getCacheKey</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/ITileLayer.html" title="interface in com.mapbox.mapboxsdk.tileprovider.tilesource">ITileLayer</a></code></dd>
+<dd><code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/ITileLayer.html#getCacheKey()">getCacheKey</a></code>&nbsp;in interface&nbsp;<code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/ITileLayer.html" title="interface in com.mapbox.legacy.tileprovider.tilesource">ITileLayer</a></code></dd>
 <dt><strong>Overrides:</strong></dt>
-<dd><code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#getCacheKey()">getCacheKey</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html" title="class in com.mapbox.mapboxsdk.tileprovider.tilesource">TileLayer</a></code></dd>
+<dd><code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html#getCacheKey()">getCacheKey</a></code>&nbsp;in class&nbsp;<code><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/TileLayer.html" title="class in com.mapbox.legacy.tileprovider.tilesource">TileLayer</a></code></dd>
 <dt><span class="strong">Returns:</span></dt><dd>the cache key</dd></dl>
 </li>
 </ul>
@@ -401,8 +401,8 @@ implements <a href="../../../../../com/mapbox/mapboxsdk/views/util/constants/Map
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/ITileLayer.html" title="interface in com.mapbox.mapboxsdk.tileprovider.tilesource"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/MBTilesLayer.html" title="class in com.mapbox.mapboxsdk.tileprovider.tilesource"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/ITileLayer.html" title="interface in com.mapbox.legacy.tileprovider.tilesource"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../com/mapbox/mapboxsdk/tileprovider/tilesource/MBTilesLayer.html" title="class in com.mapbox.legacy.tileprovider.tilesource"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?com/mapbox/mapboxsdk/tileprovider/tilesource/MapboxTileLayer.html" target="_top">Frames</a></li>
@@ -427,7 +427,7 @@ implements <a href="../../../../../com/mapbox/mapboxsdk/views/util/constants/Map
 <ul class="subNavList">
 <li>Summary:&nbsp;</li>
 <li>Nested&nbsp;|&nbsp;</li>
-<li><a href="#fields_inherited_from_class_com.mapbox.mapboxsdk.tileprovider.tilesource.WebSourceTileLayer">Field</a>&nbsp;|&nbsp;</li>
+<li><a href="#fields_inherited_from_class_com.mapbox.legacy.tileprovider.tilesource.WebSourceTileLayer">Field</a>&nbsp;|&nbsp;</li>
 <li><a href="#constructor_summary">Constr</a>&nbsp;|&nbsp;</li>
 <li><a href="#method_summary">Method</a></li>
 </ul>

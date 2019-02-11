@@ -29,7 +29,7 @@ android {
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
-        applicationId "com.mapbox.mapboxsdk.android.testapp"
+        applicationId "com.mapbox.legacy.android.testapp"
     }
     buildTypes {
         release {

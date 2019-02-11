@@ -3,9 +3,9 @@
     xmlns:mapbox="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mapbox.mapboxsdk.android.testapp.LocateMeTestFragment">
+    tools:context="com.mapbox.legacy.android.testapp.LocateMeTestFragment">
 
-    <com.mapbox.mapboxsdk.views.MapView
+    <com.mapbox.legacy.views.MapView
         android:id="@+id/locateMeMapView"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"

@@ -35,8 +35,8 @@
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../com/mapbox/mapboxsdk/views/safecanvas/ISafeCanvas.UnsafeCanvasHandler.html" title="interface in com.mapbox.mapboxsdk.views.safecanvas"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../com/mapbox/mapboxsdk/views/safecanvas/SafeDashPathEffect.html" title="class in com.mapbox.mapboxsdk.views.safecanvas"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../com/mapbox/mapboxsdk/views/safecanvas/ISafeCanvas.UnsafeCanvasHandler.html" title="interface in com.mapbox.legacy.views.safecanvas"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../com/mapbox/mapboxsdk/views/safecanvas/SafeDashPathEffect.html" title="class in com.mapbox.legacy.views.safecanvas"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?com/mapbox/mapboxsdk/views/safecanvas/SafeBitmapShader.html" target="_top">Frames</a></li>
@@ -78,7 +78,7 @@
 <!-- ========= END OF TOP NAVBAR ========= -->
 <!-- ======== START OF CLASS DATA ======== -->
 <div class="header">
-<div class="subTitle">com.mapbox.mapboxsdk.views.safecanvas</div>
+<div class="subTitle">com.mapbox.legacy.views.safecanvas</div>
 <h2 title="Class SafeBitmapShader" class="title">Class SafeBitmapShader</h2>
 </div>
 <div class="contentContainer">
@@ -92,7 +92,7 @@
 <li>android.graphics.BitmapShader</li>
 <li>
 <ul class="inheritance">
-<li>com.mapbox.mapboxsdk.views.safecanvas.SafeBitmapShader</li>
+<li>com.mapbox.legacy.views.safecanvas.SafeBitmapShader</li>
 </ul>
 </li>
 </ul>
@@ -107,11 +107,11 @@
 <br>
 <pre>public class <span class="strong">SafeBitmapShader</span>
 extends android.graphics.BitmapShader</pre>
-<div class="block">The SafeBitmapShader class is designed to work in conjunction with <a href="../../../../../com/mapbox/mapboxsdk/views/safecanvas/SafeTranslatedCanvas.html" title="class in com.mapbox.mapboxsdk.views.safecanvas"><code>SafeTranslatedCanvas</code></a>
+<div class="block">The SafeBitmapShader class is designed to work in conjunction with <a href="../../../../../com/mapbox/mapboxsdk/views/safecanvas/SafeTranslatedCanvas.html" title="class in com.mapbox.legacy.views.safecanvas"><code>SafeTranslatedCanvas</code></a>
  to work around various Android issues with large canvases. For the two classes to work together,
- call <a href="../../../../../com/mapbox/mapboxsdk/views/safecanvas/SafeBitmapShader.html#onDrawCycleStart(com.mapbox.mapboxsdk.views.safecanvas.ISafeCanvas)"><code>onDrawCycleStart(com.mapbox.mapboxsdk.views.safecanvas.ISafeCanvas)</code></a> at the start of the
- <code>com.mapbox.mapboxsdk.overlay.OverlayOverlay#drawSafe</code>
- method of your <code>com.mapbox.mapboxsdk.overlay.OverlayOverlay</code>. This will set the adjustment
+ call <a href="../../../../../com/mapbox/mapboxsdk/views/safecanvas/SafeBitmapShader.html#onDrawCycleStart(com.mapbox.mapboxsdk.views.safecanvas.ISafeCanvas)"><code>onDrawCycleStart(com.mapbox.legacy.views.safecanvas.ISafeCanvas)</code></a> at the start of the
+ <code>com.mapbox.legacy.overlay.OverlayOverlay#drawSafe</code>
+ method of your <code>com.mapbox.legacy.overlay.OverlayOverlay</code>. This will set the adjustment
  needed to draw your BitmapShader safely on the canvas without any drawing distortion at high
  zoom
  levels and without any scrolling issues.</div>
@@ -170,7 +170,7 @@ extends android.graphics.BitmapShader</pre>
 </tr>
 <tr class="altColor">
 <td class="colFirst"><code>void</code></td>
-<td class="colLast"><code><strong><a href="../../../../../com/mapbox/mapboxsdk/views/safecanvas/SafeBitmapShader.html#onDrawCycleStart(com.mapbox.mapboxsdk.views.safecanvas.ISafeCanvas)">onDrawCycleStart</a></strong>(<a href="../../../../../com/mapbox/mapboxsdk/views/safecanvas/ISafeCanvas.html" title="interface in com.mapbox.mapboxsdk.views.safecanvas">ISafeCanvas</a>&nbsp;canvas)</code>
+<td class="colLast"><code><strong><a href="../../../../../com/mapbox/mapboxsdk/views/safecanvas/SafeBitmapShader.html#onDrawCycleStart(com.mapbox.mapboxsdk.views.safecanvas.ISafeCanvas)">onDrawCycleStart</a></strong>(<a href="../../../../../com/mapbox/mapboxsdk/views/safecanvas/ISafeCanvas.html" title="interface in com.mapbox.legacy.views.safecanvas">ISafeCanvas</a>&nbsp;canvas)</code>
 <div class="block">This method <b>must</b> be called at the start of the <code>Overlay#drawSafe</code> draw cycle
  method.</div>
 </td>
@@ -223,15 +223,15 @@ extends android.graphics.BitmapShader</pre>
 <!--   -->
 </a>
 <h3>Method Detail</h3>
-<a name="onDrawCycleStart(com.mapbox.mapboxsdk.views.safecanvas.ISafeCanvas)">
+<a name="onDrawCycleStart(com.mapbox.legacy.views.safecanvas.ISafeCanvas)">
 <!--   -->
 </a>
 <ul class="blockListLast">
 <li class="blockList">
 <h4>onDrawCycleStart</h4>
-<pre>public&nbsp;void&nbsp;onDrawCycleStart(<a href="../../../../../com/mapbox/mapboxsdk/views/safecanvas/ISafeCanvas.html" title="interface in com.mapbox.mapboxsdk.views.safecanvas">ISafeCanvas</a>&nbsp;canvas)</pre>
+<pre>public&nbsp;void&nbsp;onDrawCycleStart(<a href="../../../../../com/mapbox/mapboxsdk/views/safecanvas/ISafeCanvas.html" title="interface in com.mapbox.legacy.views.safecanvas">ISafeCanvas</a>&nbsp;canvas)</pre>
 <div class="block">This method <b>must</b> be called at the start of the <code>Overlay#drawSafe</code> draw cycle
- method. This will adjust the BitmapShader to the current state of the <a href="../../../../../com/mapbox/mapboxsdk/views/safecanvas/ISafeCanvas.html" title="interface in com.mapbox.mapboxsdk.views.safecanvas"><code>ISafeCanvas</code></a>
+ method. This will adjust the BitmapShader to the current state of the <a href="../../../../../com/mapbox/mapboxsdk/views/safecanvas/ISafeCanvas.html" title="interface in com.mapbox.legacy.views.safecanvas"><code>ISafeCanvas</code></a>
  passed to it.</div>
 </li>
 </ul>
@@ -260,8 +260,8 @@ extends android.graphics.BitmapShader</pre>
 </div>
 <div class="subNav">
 <ul class="navList">
-<li><a href="../../../../../com/mapbox/mapboxsdk/views/safecanvas/ISafeCanvas.UnsafeCanvasHandler.html" title="interface in com.mapbox.mapboxsdk.views.safecanvas"><span class="strong">Prev Class</span></a></li>
-<li><a href="../../../../../com/mapbox/mapboxsdk/views/safecanvas/SafeDashPathEffect.html" title="class in com.mapbox.mapboxsdk.views.safecanvas"><span class="strong">Next Class</span></a></li>
+<li><a href="../../../../../com/mapbox/mapboxsdk/views/safecanvas/ISafeCanvas.UnsafeCanvasHandler.html" title="interface in com.mapbox.legacy.views.safecanvas"><span class="strong">Prev Class</span></a></li>
+<li><a href="../../../../../com/mapbox/mapboxsdk/views/safecanvas/SafeDashPathEffect.html" title="class in com.mapbox.legacy.views.safecanvas"><span class="strong">Next Class</span></a></li>
 </ul>
 <ul class="navList">
 <li><a href="../../../../../index.html?com/mapbox/mapboxsdk/views/safecanvas/SafeBitmapShader.html" target="_top">Frames</a></li>

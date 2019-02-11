@@ -3,14 +3,14 @@
  * Created on 2/23/14 at 11:36 AM
  */
 
-package com.mapbox.mapboxsdk.android.testapp.test;
+package com.mapbox.legacy.android.testapp.test;
 
 import android.test.ActivityInstrumentationTestCase2;
-import com.mapbox.mapboxsdk.android.testapp.MainActivity;
-import com.mapbox.mapboxsdk.geometry.BoundingBox;
-import com.mapbox.mapboxsdk.geometry.LatLng;
-import com.mapbox.mapboxsdk.tileprovider.MapTile;
-import com.mapbox.mapboxsdk.views.util.Projection;
+import com.mapbox.legacy.android.testapp.MainActivity;
+import com.mapbox.legacy.geometry.BoundingBox;
+import com.mapbox.legacy.geometry.LatLng;
+import com.mapbox.legacy.tileprovider.MapTile;
+import com.mapbox.legacy.views.util.Projection;
 import java.util.ArrayList;
 import junit.framework.Assert;
 
