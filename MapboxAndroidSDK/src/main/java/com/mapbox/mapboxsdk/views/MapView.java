@@ -1871,8 +1871,11 @@ public class MapView extends ViewGroup implements MapViewConstants, MapEventsRec
 
         // Draw all Overlays.
         this.getOverlayManager().draw(c, this);
-
-        c.restore();
+        try {
+            c.restore();
+        } catch (java.lang.IllegalStateException exception) {
+            exception.printStackTrace();
+        }
     }
 
     /**

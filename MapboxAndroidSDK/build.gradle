@@ -24,10 +24,6 @@ allprojects {
     repositories {
         mavenCentral()
     }
-
-//    tasks.withType(Compile) {
-//        options.encoding = 'UTF-8'
-//    }
 }
 
 repositories {
@@ -74,26 +70,7 @@ android {
             }
         }
     }
-//
-//    lintOptions {
-//        abortOnError false
-//    }
 }
-//
-//android.libraryVariants.all { variant ->
-//    def name = variant.name
-//    task "javadoc$name"(type: Javadoc) {
-//        description = "Generates javadoc for build $name"
-//        failOnError = false
-//        destinationDir = new File(destinationDir, variant.baseName)
-//        source = files(variant.javaCompile.source)
-//        ext.androidJar = "${android.sdkDirectory}/platforms/${android.compileSdkVersion}/android.jar"
-//        classpath = files(variant.javaCompile.classpath.files) + files(ext.androidJar)
-//        options.links("http://docs.oracle.com/javase/7/docs/api/")
-//        options.links("http://d.android.com/reference/")
-//        exclude '**/R.html', '**/R.*.html'
-//    }
-//}
 
 checkstyle {
     configFile project.file('../checks.xml')
@@ -144,93 +121,6 @@ task apklib(type: Zip) {
 artifacts {
     archives apklib
 }
-
-//afterEvaluate { project ->
-//    uploadArchives {
-//        repositories {
-//            mavenDeployer {
-//                beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
-//
-//                pom.groupId = GROUP
-//                pom.artifactId = POM_ARTIFACT_ID
-//                pom.version = VERSION_NAME
-//
-//                repository(url: getReleaseRepositoryUrl()) {
-//                    authentication(userName: getRepositoryUsername(),
-//                            password: getRepositoryPassword())
-//                }
-//                snapshotRepository(url: getSnapshotRepositoryUrl()) {
-//                    authentication(userName: getRepositoryUsername(),
-//                            password: getRepositoryPassword())
-//                }
-//
-///*
-//                // Leaving out as artifact was incorrectly named when found
-//                addFilter('aar') { artifact, file ->
-//                    artifact.name == archivesBaseName
-//                }
-//                addFilter('apklib') { artifact, file ->
-//                    artifact.name == archivesBaseName + '-apklib'
-//                }
-//*/
-//
-//                pom.project {
-//                    name POM_NAME
-//                    packaging POM_PACKAGING
-//                    description POM_DESCRIPTION
-//                    url POM_URL
-//
-//                    scm {
-//                        url POM_SCM_URL
-//                        connection POM_SCM_CONNECTION
-//                        developerConnection POM_SCM_DEV_CONNECTION
-//                    }
-//
-//                    licenses {
-//                        license {
-//                            name POM_LICENCE_NAME
-//                            url POM_LICENCE_URL
-//                            distribution POM_LICENCE_DIST
-//                        }
-//                    }
-//
-//                    developers {
-//                        developer {
-//                            id POM_DEVELOPER_ID
-//                            name POM_DEVELOPER_NAME
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//    }
-//
-//    signing {
-//        required { isReleaseBuild() && gradle.taskGraph.hasTask("uploadArchives") }
-//        sign configurations.archives
-//    }
-//
-//    task androidJavadocs(type: Javadoc) {
-//        failOnError false
-//        source = android.sourceSets.main.java.sourceFiles
-//        classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-//    }
-//
-//    task androidJavadocsJar(type: Jar, dependsOn: androidJavadocs) {
-//        classifier = 'javadoc'
-//        from androidJavadocs.destinationDir
-//    }
-//
-//    task androidSourcesJar(type: Jar) {
-//        classifier = 'sources'
-//        from android.sourceSets.main.java.sourceFiles
-//    }
-//
-//    artifacts {
-//        archives androidSourcesJar
-//        archives androidJavadocsJar
-//    }
-//}
 
 publishing {
     repositories {
