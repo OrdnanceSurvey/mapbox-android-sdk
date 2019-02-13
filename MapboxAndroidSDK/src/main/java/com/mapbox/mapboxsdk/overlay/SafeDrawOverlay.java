@@ -3,6 +3,7 @@ package com.mapbox.mapboxsdk.overlay;
 import android.graphics.Canvas;
 import android.graphics.Matrix;
 import android.graphics.Rect;
+
 import com.mapbox.mapboxsdk.views.MapView;
 import com.mapbox.mapboxsdk.views.safecanvas.ISafeCanvas;
 import com.mapbox.mapboxsdk.views.safecanvas.SafeTranslatedCanvas;
@@ -20,7 +21,7 @@ public abstract class SafeDrawOverlay extends Overlay {
     private boolean mUseSafeCanvas = true;
 
     protected abstract void drawSafe(final ISafeCanvas c, final MapView mapView,
-            final boolean shadow);
+                                     final boolean shadow);
 
     public SafeDrawOverlay() {
         super();
@@ -71,7 +72,11 @@ public abstract class SafeDrawOverlay extends Overlay {
         this.drawSafe(sSafeCanvas, mapView, shadow);
 
         if (this.mUseSafeCanvas) {
-            c.restore();
+            try {
+                c.restore();
+            } catch (java.lang.IllegalStateException exception) {
+                exception.printStackTrace();
+            }
         }
     }
 
